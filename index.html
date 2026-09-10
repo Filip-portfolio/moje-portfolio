@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Moje portfolio</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- INTERAKTYWNE ZDJECIE -->
+         <dialog id="modal">
+            <img src="" id="duze-zdjecie">
+            <button id="zamknij-zdjecie">❎</button>
+         </dialog>
+        
+        <!-- NAVBAR -->
+        <nav class="navbar">
+
+            <div class="brand">
+                <img src="images/logo.png" class="logo">
+
+                <div class="title-bar">
+                    <p>MojePortfolio</p>
+                </div>
+            </div>
+
+            <div class="menu">
+                <a href="#o-mnie">O MNIE</a>
+                <a href="#skille">SKILLE</a>
+                <a href="#projekty">PROJEKTY</a>
+                <a href="#kontakt">KONTAKT</a>
+            </div>
+            
+        </nav>
+
+        <main>
+            <!-- O MNIE -->
+            <section id="o-mnie" class="reveal">
+                <div id="o-mnie-box">
+                    <img src="images/logo.png" id="zdjecie-box">
+                    
+                    <div class="tekst tekst-o-mnie">
+                        <h1 class="title">O MNIE</h1>
+
+                        <p>Cześć! Jestem Kumin99, ale tak naprawdę jest to tylko mój pseudonim - moje prawdziwe imię to Filip.<br>
+                                Jestem młodym developerem, programującym z pasji do kodu oraz z zamiłowania do tworzenia.<br>
+                        </p>
+
+                        <p>
+                            Programuje od prawie 2 lat, znam i posługuję się językami programowania takimi jak Python, Java, HTML oraz CSS.<br>
+                            W swoich programach wykorzystuję także bazy danych, korzystając z systemów zarządzania bazami danych (DBMS), takich jak MySQL i SQLite.<br>
+                        </p>
+
+                        <p>
+                            Chętnie poznaje nowych ludzi i przyswajam nową wiedzę. Liczę na przyjemne projekty z fajnymi ludźmi.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SKILLE -->
+            <section id="skille" class="reveal">
+                <div id="skille-container">
+
+                    <!-- BAZY DANYCH -->
+                    <div id="skill-box">
+                        <img src="images/sql.png" class="skill-img">
+
+                        <div class="tekst tekst-skille">
+                            <h1 class="title title-skille">Bazy Danych</h1>
+
+                            <p>
+                                W swoich programach wykorzystuję bazy danych, pisane w systemach zarządzania bazami danych (DBMS) takich jak MySQL czy SQLite.
+                            </p>
+                        </div>
+                    </div>  
+                    
+                    <!-- BACKEND DEVELOPMENT -->
+                    <div id="skill-box">
+                        <img src="images/python-coding.png" class="skill-img">
+                        <div class="tekst tekst-skille">
+                            <h1 class="title title-skille">Backend Development</h1>
+
+                            <p>
+                                Python jest moim głównym językiem programowania, w którym mam prawie 2 lata doświadczenia. Znam także Javę.
+                            </p>
+                        </div>
+                    </div>    
+
+                    <!-- LIDER PROJEKTÓW -->
+                    <div id="skill-box">
+                        <img src="images/leadership3.png" class="skill-img leadership-img">
+                        <div class="tekst tekst-skille">
+                            <h1 class="title title-skille">Lider Projektów</h1>
+
+                            <p>
+                                Mam doświadczenie w kierowaniu zespołem i rozdzielaniu zadań. Poprowadziłem duży szkolny projekt inżynierski, którego celem było zbudowanie pojazdu napędzanego wiatrem.
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+
+            <!-- PROJEKTY -->
+            <section id="projekty" class="reveal">
+                <div id="projekty-box">            
+                    <div class="tekst">
+
+                        <h1 class="title" id="title-projekty">MOJE PROJEKTY</h1>
+
+                    </div>
+
+                    <!-- BOTY LIST -->
+                    <details class="projekty-list">
+                        <summary>Boty discord</summary>
+
+                        <!-- ZENCORE BOT -->
+                        <details class="projekt-bot">
+                            <summary>Bot dla projektu "ZenCøre Studio"</summary>
+
+                            <div class="projekt-bot-opis">
+                                <p>Bot został wykonany: 27.08.2026</p>
+                            </div>
+                            
+                            <div class="projekt-bot-zdjecia">
+                                <img src="images/Wizytowka.png" class="interaktywne-zdjecie">
+                                <img src="images/Kolaz1.JPG" class="interaktywne-zdjecie">
+                                <img src="images/Kolaz2.JPG" class="interaktywne-zdjecie">
+                            </div>
+                        </details>
+                    </details>
+
+                </div>
+            </section>
+
+            <!-- KONTAKT -->
+            <section id="kontakt" class="reveal">
+                <div id="kontakt-box">                    
+                    <div class="tekst" id="tekst-kontakt">
+                        <h1 class="title" id="title-kontakt">KONTAKT</h1>
+
+                        <p>DISCORD: kumin99<br>
+                        MAILA: sspfilio27@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            
+            // ANIMACJA WEJSCIA
+            const elements = document.querySelectorAll('.reveal');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting){
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // INTERAKTYWNE ZDJECIA
+
+            const interaktywne_zdjecie = document.querySelectorAll(".interaktywne-zdjecie");
+            const duze_zdjecie = document.getElementById("duze-zdjecie")
+            const modal = document.getElementById("modal");
+            const zamknij = document.getElementById("zamknij-zdjecie");
+
+            interaktywne_zdjecie.forEach(zdjecie => {
+                zdjecie.addEventListener("click", () => {
+                    duze_zdjecie.src = zdjecie.src;
+                    modal.showModal();
+                });
+            });
+
+            zamknij.addEventListener("click", () => {
+                modal.close();
+            });
+
+        </script>
+
+    </body>
+</html>

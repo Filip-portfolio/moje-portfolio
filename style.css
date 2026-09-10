@@ -1,0 +1,315 @@
+.tekst{
+    flex: 1;
+    color: rgba(255, 255, 255, 0.635);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Anta", sans-serif; 
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 10px
+}
+
+.title{
+    flex: 1;
+    text-align: center;
+    background: linear-gradient(90deg, hsla(33, 97%, 54%, 1) 0%, hsla(45, 97%, 54%, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: "Anta", sans-serif;    
+    
+    margin-bottom: 0;
+    margin-top: 10px
+}
+
+/* ======= BODY ======= */
+
+body{
+    margin: 0;
+    /* background-image: url("images/tlo2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-position-y: 100%; */
+
+    background-image: url(images/tlo3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: 90%;
+}
+
+/* ======= INTERAKTYWNE ZDJECIE ======= */
+#duze-zdjecie{
+    max-width: 90dvh;
+    max-height: 90dvh;
+    display: block;
+}
+
+#modal{
+    /* border: 1px solid rgba(255, 255, 255, 0.215); */
+    border: none;
+    border-radius: 15px;
+    padding: 50px;
+    background: none;
+}
+
+#zamknij-zdjecie{
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* ======= BAR ======= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 75px;
+    background-color: rgba(12, 14, 20, 0.897);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.215);
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.title-bar{
+    color: transparent;
+    background: linear-gradient(90deg, hsla(33, 97%, 54%, 1) 0%, hsla(45, 97%, 54%, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo{
+    height: 60px;
+    border-radius: 50%;
+}
+
+.menu{
+    display: flex;
+    gap: 50px;
+    padding: 5px 200px;
+}
+
+.menu a {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: gray;
+}
+
+/* ======= O MNIE ======= */
+
+#o-mnie{
+    scroll-margin-top: 250px;
+}
+
+#o-mnie-box{
+    margin-top: 100px;
+    margin-right: 25%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgba(12, 14, 20, 0.897);
+    padding: 10px 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#zdjecie-box{
+    height: 600px;
+}
+
+.tekst-o-mnie{
+    font-size: 25px;
+}
+
+/* ======= SKILLE ======= */
+#skille{
+    scroll-margin-top: 250px;
+}
+
+#skille-container{
+    background-color: rgba(12, 14, 20, 0.897);
+    margin-top: 150px;
+    padding: 60px;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#skill-box{
+    background-color: rgba(52, 45, 45, 0.683);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    width: 33.33%;
+    height: 250px;
+
+    margin-right: 25px;
+    margin-left: 25px
+}
+
+.tekst-skille{
+    font-size: 20px;
+}
+
+.skill-img{
+    height: 180px;
+    margin-right: 20px;
+}
+
+.leadership-img{
+    height: 150px;
+}
+
+.title-skille{
+    font-size: 30px;
+}
+
+/* ======= PROJEKTY ======= */
+
+#projekty-box{
+    background-color: rgba(12, 14, 20, 0.897);
+    margin-top: 150px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#title-projekty{
+    font-size: 45px;
+}
+
+/* GLOWNY SELECT LISTY PROJEKTOW */
+.projekty-list{
+    margin-top: 25px;
+}
+
+.projekty-list > summary{
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Anta", sans-serif; 
+    text-align: center;
+
+    list-style: none;
+}
+
+.projekty-list summary::before{
+    content: "➡️";
+}
+
+.projekty-list[open] > summary::before{
+    content: "⬇️";
+}
+
+/* POJEDYNCZE PROJEKTY */
+
+.interaktywne-zdjecie{
+    cursor: pointer;
+}
+
+.projekt-bot{
+    margin: 20px 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.projekt-bot > summary{
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    font-family: "Anta", sans-serif; 
+    text-align: left;
+
+    list-style: none;
+}
+
+.projekt-bot summary::before{
+    content: "➡️";
+}
+
+.projekt-bot[open] > summary::before{
+    content: "⬇️";
+}
+
+.projekt-bot-zdjecia{
+    display: flex;
+    justify-content: space-between;
+}
+
+.projekt-bot-zdjecia img{
+    height: 600px;   
+}
+
+.projekt-bot-opis{
+    color: rgba(255, 255, 255, 0.635);
+    font-size: 22px;
+    font-family: "Anta", sans-serif; 
+    text-align: left;
+}
+
+/* ======= KONTAKT ======= */
+#kontakt-box{
+    background-color: rgba(12, 14, 20, 0.897);
+    margin: 150px 25% 0;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#title-kontakt{
+    font-size: 40px;
+}
+
+#tekst-kontakt{
+    color: white;
+    text-align: center;
+}
+
+/* ======= ANIMACJE ======= */
+/*  Animacja WEJSCIA  */
+
+.reveal{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+.reveal.show{
+    opacity: 1;
+    transform: translateX(0);
+}
